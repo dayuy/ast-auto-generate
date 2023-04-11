@@ -1,0 +1,17 @@
+{
+  "name": "ast-auto-generate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gen": "node ./src/index.js pod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.21.4",
+    "ast-types": "^0.14.2",
+    "recast": "^0.22.0"
+  }
+}
