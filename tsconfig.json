@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+      "target": "es5",
+      "declaration": true,
+      "module": "commonjs",
+      "strict": true,
+      "outDir": "./dist",
+      "rootDir": "./src"
+  },
+  "include": [
+    "src/compiler/**/*",
+  ],
+  "exclude": [
+    "node_modules",
+    "gen",
+    "dist",
+    "src/del/**/*",
+    "src/sample/**/*",
+    "src/tmp/**/*",
+    "src/utils/**/*",
+  ]
+}
