@@ -11,11 +11,11 @@ export class ComponentplanArgs extends PaginationArgs {
   namespace: string;
 
   /** 排序方向 */
-  @Field(() => SortDirection, { description: '排序方向' })
+  @Field(() => SortDirection, { description: `排序方向` })
   sortDirection?: SortDirection;
 
   /** 排序字段 */
-  @Field(() => String, { description: '排序字段' })
+  @Field(() => String, { description: `排序字段` })
   sortField?: 'creationTimestamp';
 
   /** 集群（不传则为默认集群） */
