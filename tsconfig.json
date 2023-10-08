@@ -4,16 +4,17 @@
       "declaration": true,
       "module": "commonjs",
       "strict": true,
-      "outDir": "./dist",
+      "outDir": "./bin",
       "rootDir": "./src"
   },
   "include": [
     "src/compiler/**/*",
+    "src/commands/**/*"
   ],
   "exclude": [
     "node_modules",
     "gen",
-    "dist",
+    "bin",
     "src/del/**/*",
     "src/sample/**/*",
     "src/tmp/**/*",

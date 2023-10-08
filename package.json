@@ -1,18 +1,29 @@
 {
-  "name": "ast-auto-generate",
+  "name": "generate-nest-module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "bin": {
+    "gennest": "bin/commands/index.js"
+  },
   "scripts": {
-    "build": "tsc && cp -r src/tmp dist/tmp",
-    "build:gen": "tsc && cp -r src/tmp dist/tmp && node dist/compiler/index.js"
+    "build": "tsc && cp -r src/tmp bin/tmp",
+    "build:gen": "npm run build && node bin/compiler/index.js",
+    "start": "npm run build && node bin/commands/index.js",
+    "publish:npm": "npm publish --access public"
   },
   "keywords": [],
-  "author": "",
+  "author": "dayuy",
   "license": "ISC",
   "dependencies": {
     "@babel/parser": "^7.21.4",
     "ast-types": "^0.14.2",
+    "commander": "^11.0.0",
     "recast": "^0.22.0",
     "typescript": "^5.1.6"
   },

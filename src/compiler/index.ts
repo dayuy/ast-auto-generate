@@ -2,7 +2,7 @@ import * as path from 'path';
 import print from './print';
 
 const tempPath = path.join(__dirname, '../tmp/componentplan/componentplan.module.ts');
-const substitute = 'subscript';
+const substitute = process.argv?.[3] || 'subscription';
 
 // compile([tempPath], substitute, (fileName: string, text: string, writeByteOrderMark: boolean, onError?: (message: string) => void, sourceFiles?: readonly ts.SourceFile[], data?: ts.WriteFileCallbackData) => {
 //   const newPartialPath = path.join(__dirname, "../../gen/", fileName.replace(/^.*\/tmp\//, ''));
