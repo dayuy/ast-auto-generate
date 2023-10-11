@@ -1,6 +1,6 @@
 {
   "name": "generate-nest-module",
-  "version": "1.0.0",
+  "version": "1.0.12",
   "description": "",
   "publishConfig": {
     "access": "public"
@@ -9,13 +9,13 @@
     "node": ">= 16"
   },
   "bin": {
-    "gennest": "bin/commands/index.js"
+    "gennest": "./bin/commands/index.js"
   },
   "scripts": {
     "build": "tsc && cp -r src/tmp bin/tmp",
     "build:gen": "npm run build && node bin/compiler/index.js",
     "start": "npm run build && node bin/commands/index.js",
-    "publish:npm": "npm publish --access public"
+    "publish:npm": "npm run build && npm publish --access public"
   },
   "keywords": [],
   "author": "dayuy",

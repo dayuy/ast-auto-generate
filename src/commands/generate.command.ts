@@ -13,13 +13,17 @@ export default async function generateCommand(program: Command): Promise<void> {
       if (!name) {
         program.error('error: missing required argument "name"');
       }
-      await run(schematic, name);
+      try {
+        await run(schematic, name);
+      } catch (error) {
+        console.error(error)
+      }
     })
 }
 
 async function run(schematic: string, name: string): Promise<null | string> {
   const cwd = process.cwd();
-  const resolvePath = 'bin/compiler/index.js' || require.resolve(
+  const resolvePath = require.resolve(
     'generate-nest-module/bin/compiler/index.js',
     { paths: module.paths },
   );
