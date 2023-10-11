@@ -1,6 +1,10 @@
 # ast-auto-generate
 Automatically generate code snippets from the AST.
 
-### develop
+### Installation
 
-`npm run start`
+`npm install -g generate-nest-module`
+
+### Usage
+
+`gennest g resource my-resource`
